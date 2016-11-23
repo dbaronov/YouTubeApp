@@ -11,7 +11,7 @@ Checkout this repo, install dependencies, then start the gulp process with the f
 
 ```
 	> git clone git@github.com:dbaronov/YouTubeApp.git
-	> cd ReduxSimpleStarter
+	> cd YouTubeApp
 	> npm install
 	> npm start
 ```
