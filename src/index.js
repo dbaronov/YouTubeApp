@@ -19,7 +19,7 @@ class App extends Component {
 		this.state = {
 			videos: [],
 			selectedVideo: null,
-			activeVideo: "active"
+			activeVideoClass: '',
 		};
 
 		this.videoSearch('zelda gameplay');
@@ -30,21 +30,23 @@ class App extends Component {
 			this.setState(
 				{
 					videos: videos,
-					selectedVideo: videos[0]
+					selectedVideo: videos[0],
+					activeVideoClass: 'active',
 				 }
 			);
 		});
 	}
 
 	render() {
+
 		return (
 			<div>
 				<SearchBar onSearchTermChange={term => this.videoSearch(term)} />
 				<VideoDetail video={this.state.selectedVideo} />
 				<VideoList
-					onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+					onVideoSelect={ (selectedVideo) => this.setState({selectedVideo}) }
 					videos={this.state.videos}
-					activeVideo={this.state.activeVideo} />
+					 />
 			</div>
 		)
 	}
